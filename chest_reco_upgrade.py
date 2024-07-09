@@ -27,8 +27,8 @@ rectangles_right = match_and_get_rectangles(gamescreen, chest_right)
 rectangles_front = match_and_get_rectangles(gamescreen, chest_front)
 all_rectangles = rectangles_left + rectangles_right + rectangles_front
 
-for (x, y, w, h) in all_rectangles:
-    cv2.rectangle(gamescreen, (x, y), (x + w, y + h), (255, 0, 0), 1)  
+#for (x, y, w, h) in all_rectangles:
+#    cv2.rectangle(gamescreen, (x, y), (x + w, y + h), (255, 0, 0), 1)  
 
 grouped_rectangles, weights = cv2.groupRectangles(all_rectangles, groupThreshold=1, eps=0.2)
 
